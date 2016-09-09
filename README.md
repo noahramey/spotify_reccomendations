@@ -1,24 +1,55 @@
-# README
+# Spotify Track Recommendations Based on Playlists
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app will be able to take a users playlists, recommend tracks, and allow the user to vote on the recommended tracks to get tracks more like what is recommended or less like the recommendation. Built with Ruby on Rails.
 
-Things you may want to cover:
+### Week by Week Goals.
 
-* Ruby version
+##### Week 1:
 
-* System dependencies
+* Be able to add tracks and playlists locally.
 
-* Configuration
+* Route to their own pages with information showing.
 
-* Database creation
+##### Week 2:
 
-* Database initialization
+* TBD
 
-* How to run the test suite
+##### Week 3:
 
-* Services (job queues, cache servers, search engines, etc.)
+* TBD
 
-* Deployment instructions
+##### Week 4:
 
-* ...
+* TBD
+
+### Installation
+
+Open Terminal and clone the repository.  
+```
+$ cd Desktop
+$ git clone https://github.com/noahramey/spotify_recommendations.git
+```
+
+Navigate to the repository and bundle Ruby gems:
+```
+$ cd spotify_recommendations
+$ bundle install
+```
+
+Make sure Postgres is running on your local machine, then setup the database:
+```
+$ rails db:setup db:test:prepare
+```
+
+Start the Rails server.
+```
+$ rails s
+```
+
+Open your browser and navigate to `localhost:3000`.
+
+
+License
+-------
+
+MIT License. Copyright &copy; 2016 "Noah Ramey"
