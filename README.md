@@ -6,7 +6,7 @@ This app will be able to take a users playlists, recommend tracks, and allow the
 
 ##### Week 1:
 
-* Be able to add tracks and playlists locally.
+* Be able to add playlists locally.
 
 * Route to their own pages with information showing.
 
