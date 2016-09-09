@@ -12,6 +12,8 @@ This app will be able to take a users playlists, recommend tracks, and allow the
 
 ##### Week 2:
 
+* Add User Auth
+
 * TBD
 
 ##### Week 3:

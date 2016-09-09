@@ -1,0 +1,14 @@
+<h1><a href="<%= @playlist.url %>"></a> <%= @playlist.name %></h1>
+<p>Playlist description: <%= @playlist.description %></p>
+
+<% if @playlist.tracks.any? %>
+  <div class="well">
+    <% @playlist.tracks.each do |track| %>
+      <p><%= track.name %> | <%= track.artist %> | <%= track.album %></p>
+    <% end %>
+  </div>
+<% else %>
+  <p>This playlist is empty.</p>
+<% end %>
+
+<%= link_to "Return to Home", playlists_path %>

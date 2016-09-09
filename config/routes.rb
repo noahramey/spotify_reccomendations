@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :playlists do
-    resources :tracks
+  root :to => 'playlists#index'
+
+  resources :playlists, :only => [:show, :index] do
+    resources :tracks, :only => [:show]
   end
 end
