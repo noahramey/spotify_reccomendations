@@ -1,2 +1,37 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.well {
+  width: 60%;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 100%
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  height: 15px;
+}
+
+tr, td {
+  height: 15px;
+}
+
+tr:hover {
+  background-color: #e7e7e7;
+}

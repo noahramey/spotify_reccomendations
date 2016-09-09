@@ -3,9 +3,20 @@
 
 <% if @playlist.tracks.any? %>
   <div class="well">
-    <% @playlist.tracks.each do |track| %>
-      <p><%= track.name %> | <%= track.artist %> | <%= track.album %></p>
-    <% end %>
+    <div style="overflow-x:auto;">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Artist</th>
+          <th>Album</th>
+        </tr>
+        <% @playlist.tracks.each do |track| %>
+        <tr>
+          <td><%= track.name %></td><td><%= track.artist %></td><td><%= track.album %></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
   </div>
 <% else %>
   <p>This playlist is empty.</p>
