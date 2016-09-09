@@ -1,0 +1,22 @@
+<h1>New Playlist</h1>
+
+<% if @playlist.errors.any? %>
+  <h3>Please fix these errors:</h3>
+  <ul>
+    <% @playlist.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @playlist do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+  <%= f.submit %>
+<% end %>
+<hr>
+<%= link_to "Return to Home", playlists_path %>
