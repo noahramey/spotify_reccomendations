@@ -1,4 +1,4 @@
-<h1><a href="<%= @playlist.url %>"></a> <%= @playlist.name %></h1>
+<h1><%= @playlist.name %></h1>
 <p>Playlist description: <%= @playlist.description %></p>
 
 <% if @playlist.tracks.any? %>
@@ -7,12 +7,10 @@
       <table>
         <tr>
           <th>Name</th>
-          <th>Artist</th>
-          <th>Album</th>
         </tr>
         <% @playlist.tracks.each do |track| %>
         <tr>
-          <td><%= track.name %></td><td><%= track.artist %></td><td><%= track.album %></td>
+          <td><%= track.name %></td>
         </tr>
         <% end %>
       </table>
