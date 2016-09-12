@@ -6,7 +6,7 @@
 
 <% if @playlists.any? %>
   <% @playlists.each do |playlist| %>
-    <h5><%= link_to playlist.name, playlist_path(playlist.id) %></h5>
+    <h5><%= link_to playlist.name, playlist_path(playlist) %></h5>
   <% end %>
 <% else %>
   <h3>You have no playlists.</h3>

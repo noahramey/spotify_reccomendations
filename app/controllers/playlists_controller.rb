@@ -1,15 +1,11 @@
 class PlaylistsController < ApplicationController
-
-  RSpotify.authenticate("7dfcfde7deae46579729317d4fcb7097", "45b98919ccf846b985a41fa1be9d08b5")
-
   def index
-    @test = RSpotify::User.find('noahramey')
-    @playlists = @test.playlists
+    @playlists = Playlist.all
     render :index
   end
 
   def show
-    @playlist = RSpotify::Playlist.find('noahramey', params[:id])
+    @playlist = Playlist.find(params[:id])
     render :show
   end
 
