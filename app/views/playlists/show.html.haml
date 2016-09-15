@@ -1,0 +1,21 @@
+%h1
+  %a{:href => "#{@playlist.url}"}
+  = @playlist.name
+%p
+  Playlist description: #{@playlist.description}
+- if @playlist.tracks.any?
+  .well
+    %div{:style => "overflow-x:auto;"}
+      %table
+        %tr
+          %th Name
+          %th Artist
+          %th Album
+        - @playlist.tracks.each do |track|
+          %tr
+            %td= track.name
+            %td= track.artist
+            %td= track.album
+- else
+  %p This playlist is empty.
+= link_to "Return to Home", playlists_path

@@ -11,6 +11,8 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'rspotify', '~> 1.16'
+gem 'html2haml'
+gem 'haml'
 
 group :development, :test do
   gem 'byebug', platform: :mri
