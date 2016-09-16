@@ -15,6 +15,7 @@ gem 'rspotify', '~> 1.16'
 gem 'html2haml'
 gem 'haml'
 gem 'paperclip', '~> 5.0.0'
+gem 'activerecord-import', '~> 0.15.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
