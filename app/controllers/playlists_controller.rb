@@ -1,7 +1,16 @@
 class PlaylistsController < ApplicationController
   def index
-    @playlists = Playlist.all
-    render :index
+    if current_user
+      if current_user.account
+        @playlists = current_user.account.playlists
+        render :index
+      else
+        redirect_to new_account_path
+      end
+    else
+      @playlists = Playlist.all
+      render :index
+    end
   end
 
   def show

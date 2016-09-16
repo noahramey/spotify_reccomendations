@@ -1,0 +1,7 @@
+%h1 #{@account.name}'s Profile
+%p username: #{@account.username}
+
+-if current_user
+  -if current_user.account == @account
+    =link_to 'Edit Account', edit_account_path(@account)
+=link_to 'Return to Home', root_path

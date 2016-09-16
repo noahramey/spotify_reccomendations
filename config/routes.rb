@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
   root :to => 'playlists#index'
 
   resources :playlists, :except => [:edit, :update, :destroy]
-
-  get '/auth/spotify/callback', to: 'users#spotify'
+  resources :accounts
 end
