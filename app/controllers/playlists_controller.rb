@@ -19,12 +19,14 @@ class PlaylistsController < ApplicationController
   end
 
   def new
-    @playlist = Playlist.new
+    current_user
+    @account = current_user.account
+    @playlist = @account.playlists.new
     render :new
   end
 
   def create
-    @playlist = Playlist.new(playlist_params)
+    @playlist = current_user.account.playlists.new(playlist_params)
     if @playlist.save
       flash[:notice] = "Playlist successfully created!"
       redirect_to playlists_path
