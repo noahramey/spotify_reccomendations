@@ -26,6 +26,8 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails', "~> 4.0"
   gem 'simplecov', require: false
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
