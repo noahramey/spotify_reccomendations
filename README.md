@@ -12,9 +12,11 @@ This app will be able to take a users playlists, recommend tracks, and allow the
 
 ##### Week 2:
 
-* Add User Auth
+* Add user authentication with Devise
 
-* TBD
+* Update specs to use FactoryGirl and SimpleCov
+
+* Find user's playlists and tracks on creation of an account using the Spotify username.
 
 ##### Week 3:
 
